@@ -1,19 +1,24 @@
-<div class="container-fluid p-3 bg-primary text-white col-11 mt-3">
-    <h1 class="text-center">
-      News Project
-    </h1>
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <a class="navbar-brand text-dark" href="/home">News Project</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link text-dark" href="/news">News</a>
+        <a class="nav-link text-dark" href="/blogs">Blog</a>
+        <a class="nav-link text-dark" href="/developers">Developers</a>
+      </div>
+    </div>
   </div>
-  <div class="container bg-danger mb-2 col-11">
-    <ul class="nav justify-content-center row p-2">
-      <li class="nav-item rounded bg-primary m-1 col-sm-3 col-10">
-        <a class="nav-link text-white text-center text-wrap font-weight-bold" routerLink="/news">News</a>
-      </li>
-      <li class="nav-item rounded bg-primary m-1 col-sm-3 col-10">
-        <a class="nav-link text-white text-center text-wrap font-weight-bold" routerLink="/blogs">Blog</a>
-      </li>
-      <li class="nav-item rounded bg-primary m-1 col-sm-3 col-10">
-        <a class="nav-link text-white text-center text-wrap font-weight-bold" routerLink="/developers">Developers</a>
-      </li>
-    </ul>
-  </div>
-  <router-outlet></router-outlet>
+</nav>
+<router-outlet></router-outlet>

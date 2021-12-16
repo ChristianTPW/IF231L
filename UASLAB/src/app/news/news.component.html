@@ -1,4 +1,27 @@
 <div class="container center">
-    <h2> News </h2>
-
+  <div class="row">
+    <div class="col-sm-12 mt-sm-4" *ngFor="let news of nws">
+      <div
+        class="card"
+        style="border-style: solid; border-width: 4px; border-color: black"
+      >
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm-6">
+              <h5 class="card-title">{{ news.title }}</h5>
+            </div>
+            <div class="col-sm-6" style="text-align: right">
+              <h5>{{ news.date }}</h5>
+            </div>
+          </div>
+          <p
+            class="card-text"
+            style="border-style: solid; border-width: 2px; border-color: black"
+          >
+            {{ news.content }} <a href="#">Read more</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

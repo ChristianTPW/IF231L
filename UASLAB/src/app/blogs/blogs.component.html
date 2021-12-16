@@ -1,3 +1,35 @@
-<p>blogs works!</p>
+<div class="container center">
+  <button
+    (click)="logout()"
+    style="float: right; margin-top: 1.5em"
+    class="btn btn-danger"
+  >
+    Logout
+  </button>
 
-<button (click)="logout()">Logout</button>
+  <div class="row">
+    <div class="col-sm-12 mt-sm-4" *ngFor="let blog of blg">
+      <div
+        class="card"
+        style="border-style: solid; border-width: 4px; border-color: black"
+      >
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm-6">
+              <h5 class="card-title">{{ blog.title }}</h5>
+            </div>
+            <div class="col-sm-6 text-right">
+              <h5>{{ blog.date }}</h5>
+            </div>
+          </div>
+          <p
+            class="card-text"
+            style="border-style: solid; border-width: 2px; border-color: black"
+          >
+            {{ blog.content }} <a href="#">Read more</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

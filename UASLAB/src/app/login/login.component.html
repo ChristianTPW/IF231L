@@ -1,6 +1,16 @@
-<div>
-  Username <input type="text" #username /> Password
-  <input type="text" #password />
-
-  <button (click)="login(username.value, password.value)">Submit</button>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+        <main class="form-signin">
+            <h1 class="h3 mb-3 fw-normal text-center">Login</h1>
+                <div class="form-floating">
+                    <input type="username  is-invalid @enderror" class="form-control" id="username" placeholder="username" name="username" #username>
+                </div>
+                <div class="form-floating mt-sm-4 mb-sm-4">
+                    <input type="password" class="form-control" id="password" #password placeholder="Password" name="password">
+                </div>
+                <button class="w-100 btn btn-lg btn-primary" (click)="login(username.value, password.value) "type="submit">Login</button>
+        </main>
+    </div>
+  </div>
 </div>

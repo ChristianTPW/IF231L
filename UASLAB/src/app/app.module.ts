@@ -6,8 +6,8 @@ import { NewsComponent } from './news/news.component';
 import { BlogsComponent } from './blogs/blogs.component';
 import { DevelopersComponent } from './developers/developers.component';
 import { AppRoutingModule } from './app-routing.module';
-import { NewsService } from './news.service';
 import { LoginComponent } from './login/login.component';
+import { ContentService } from './content-service.service';
 
 @NgModule({
   declarations: [
@@ -15,13 +15,10 @@ import { LoginComponent } from './login/login.component';
     NewsComponent,
     BlogsComponent,
     DevelopersComponent,
-    LoginComponent
+    LoginComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-  ],
-  providers: [NewsService],
-  bootstrap: [AppComponent]
+  imports: [BrowserModule, AppRoutingModule],
+  providers: [ContentService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

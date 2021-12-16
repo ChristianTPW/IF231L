@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ContentService } from '../content-service.service';
 
 @Component({
   selector: 'app-blogs',
@@ -7,7 +8,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./blogs.component.css'],
 })
 export class BlogsComponent implements OnInit {
-  constructor(private router: Router) {}
+  public blg = [] as any;
+
+  constructor(private router: Router, private cntService: ContentService) {}
 
   ngOnInit(): void {
     const sessExists = localStorage.getItem('sess');
@@ -16,7 +19,7 @@ export class BlogsComponent implements OnInit {
       return;
     }
 
-    // render blogs
+    this.blg = this.cntService.getBlogs();
   }
 
   logout() {
